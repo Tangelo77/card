@@ -1,0 +1,180 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height:100vh;
+  background-color: #073b4c;
+}
+
+.birthdayCard {
+  position: relative;
+  width: 250px;
+  height:350px;
+  cursor: pointer;
+  transform-style: preserve-3d;
+	transform: perspective(2500px);
+  transition: 1s;
+}
+
+.cardFront {
+  position: relative;
+  background-color: #fff;
+  width: 350px;
+  height:450px;
+  overflow: hidden;
+  transform-origin: left;
+  box-shadow: inset 100px 20px 100px rgba(0,0,0,.2), 30px 0 50px rgba(0,0,0,0.4);
+  background-color: #c73e1d;
+background-image: linear-gradient(315deg, #c73e1d 0%, #a23b72 37%, #2e86ab 100%);
+}
+
+.happy {
+  font-family: Franklin Gothic Bold, sans-serif;
+  text-align: center;
+  margin:30px; 
+  background-color: #91d370;
+background-image: linear-gradient(319deg, #91d370 0%, #bca0ff 37%, #f2cd54 100%);
+
+  transition: .1s;
+}
+
+.balloons {
+  position: absolute;
+  left:110px;
+}
+
+
+
+.balloonOne, .balloonTwo, .balloonThree, .balloonFour, .balloonFive {
+  position: absolute;
+  width: 85px;
+  height:95px;
+  border-radius:50%;
+}
+
+.balloonOne {
+  background-color: #dbf26e;
+background-color: #045de9;
+background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
+  left:-70px;
+  top:20px;
+}
+	
+.balloonTwo {
+  background-color: #ba2d0b;
+background-image: linear-gradient(319deg, #ba2d0b 0%, #fe7f2d 37%, #ffbf46 100%);
+  left:-10px;
+  top:50px;
+}
+
+.balloonThree {
+  background-color: #fff293;
+background-image: linear-gradient(315deg, #FFD700 0%, #FEBE10 74%);
+  left:50px;
+  top:20px;
+}
+
+.balloonFour {
+  background-color: #00b712;
+background-image: linear-gradient(315deg, #00b712 0%, #5aff15 74%);
+  left:110px;
+  top:50px;
+}
+
+.balloonFive {
+  background-color: rgb(70, 96, 242);
+  left:170px;
+  top:20px;
+}
+
+.balloonOne:before, .balloonTwo:before, .balloonThree:before, .balloonFour:before, .balloonFive:before {
+  content:"";
+  position: absolute;
+  width:1px;
+  height: 155px;
+  background-color: #ffd166;
+  top:95px;
+  left:43px;
+}
+
+.card-text {
+  font-size: 27px;;
+}
+
+.balloonOne:after, .balloonTwo:after, .balloonThree:after, .balloonFour:after {
+  content:"";
+  position: absolute;
+  border-right: 7px solid transparent;
+  border-left: 7px solid transparent;
+  top:94px;
+  left:37px;
+}
+
+.balloonOne:after {
+  border-bottom: 10px solid #ef476f;
+}
+
+.balloonTwo:after {
+  border-bottom: 10px solid #06d6a0;
+}
+
+.balloonThree:after {
+  border-bottom: 10px solid #ffd166;
+}
+
+.balloonFour:after {
+  border-bottom: 10px solid #118ab2;
+}
+
+.balloonFive:after {
+  border-bottom: 10px solid #118ab2;
+}
+
+.cardInside {
+  position: absolute;
+  background-color: #d63230;
+background-color: #faa499;
+background-image: linear-gradient(319deg, #faa499 0%, #f7dd85 37%, #ffc55c 100%);
+
+  width: 350px;
+  height:450px;
+  z-index:-1;
+  left:0;
+  top:0;
+  box-shadow: inset 100px 20px 100px rgba(0,0,0,0.2);
+}
+
+p {
+  font-family: 'Brush Script MT', cursive;
+  margin: 40px;
+  color: #333;
+}
+
+.name {
+  position: absolute;
+  left:150px;
+  top:200px;
+  color: #333;
+}
+
+.back {
+  font-family: Tahoma, sans-serif;
+  color: #333;
+  text-align: center;
+  margin:30px; 
+  outline-color:#333;
+  outline-style: dotted;
+}
+
+.birthdayCard:hover {
+	transform: perspective(2500px) rotate(5deg);
+	box-shadow: inset 100px 20px 100px rgba(0,0,0,.2), 0 10px 100px rgba(0,0,0,0.5);
+}
+
+.birthdayCard:hover .cardFront {
+  transform: rotateY(-160deg); 
+}
+
+.birthdayCard:hover .happy {
+  visibility:hidden; 
+}
